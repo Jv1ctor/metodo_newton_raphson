@@ -10,11 +10,11 @@ def calcN(list):
       acc += list[i]
     return (acc+10)/10
 
-#
+# Calcula a derivada pelo metodo numerico
 def derivada_numerica(f, x, h = 0.0001):
   return (f(x + h) - f(x - h)) / (2 * h)
 
-# 
+# calcula 
 def newton_raphson(n_velo,fun, val0, tol = 1e-8, maxIter = 100):
     for _ in range(maxIter):
       f = lambda t: fun(t) - n_velo
@@ -56,6 +56,7 @@ list_right_ordered = sorted(list_right)
 
 loop = True
 while(loop):
+  print(f"\nQual o instante em que o personagem atinge {N}m/s")
   print("\nEscolha uma das opcoes: ")
   print("-- 0 para raizes aproximados pela Esquerda")
   print("-- 1 para raizes aproximados pela Direita")
